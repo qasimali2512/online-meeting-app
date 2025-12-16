@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: zoomDarkBlue,
       body: Center(
         child: Text(
-          'Zoom',
+          'Online Meeting',
           style: TextStyle(
             color: Colors.white,
             fontSize: 34,

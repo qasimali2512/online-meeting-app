@@ -144,26 +144,26 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
             Container(
               child: Column(
                 children: [
-              DefaultTextStyle(
-              style: const TextStyle(color: Colors.black, fontSize: 16),
-                 child:  MeetingOption(
-                    text: 'Mute Audio',
-                    isMute: isAudioMuted,
-                    onChange: onAudioMuted,
+                  DefaultTextStyle(
+                    style: const TextStyle(color: Colors.black, fontSize: 16),
+                    child:  MeetingOption(
+                      text: 'Mute Audio',
+                      isMute: isAudioMuted,
+                      onChange: onAudioMuted,
 
+                    ),
                   ),
-              ),
-                DefaultTextStyle(
-                  style: const TextStyle(color: Colors.black, fontSize: 16),
+                  DefaultTextStyle(
+                    style: const TextStyle(color: Colors.black, fontSize: 16),
 
-                  child:MeetingOption(
-                    text: 'Turn off My Video',
-                    isMute: isVideoMuted,
-                    onChange: onVideoMuted,
+                    child:MeetingOption(
+                      text: 'Turn off My Video',
+                      isMute: isVideoMuted,
+                      onChange: onVideoMuted,
 
+                    ),
                   ),
-                ),
-        ],
+                ],
               ),
             ),
           ],

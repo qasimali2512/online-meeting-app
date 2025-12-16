@@ -5,7 +5,7 @@ import 'package:zoom/resources/firestore_methods.dart';
 
 class JitsiMeetMethod {
   final AuthMethods _authMethods = AuthMethods();
-  final FirestoreMethods _firestoreMethods=FirestoreMethods();
+  final FirestoreMethods _firestoreMethods = FirestoreMethods();
 
   Future<void> createMeeting({
     required String roomName,
@@ -17,6 +17,12 @@ class JitsiMeetMethod {
       Map<String, Object> featureFlags = {
         "welcomepage.enabled": false,
         "resolution": 360,
+        "meeting-security.disabled": true,
+        "security.disabled": true,
+        "lobby-mode.enabled": false,
+        "prejoinpage.enabled": false,
+        "googleApi.disabled": true,
+        "facebookApi.disabled": true,
       };
 
       final user = _authMethods.user;
@@ -28,6 +34,7 @@ class JitsiMeetMethod {
 
       var options = JitsiMeetingOptions(
         roomNameOrUrl: roomName,
+        serverUrl: "https://meet.jit.si",
         userDisplayName: name,
         userEmail: email,
         userAvatarUrl: photoUrl,
@@ -35,7 +42,9 @@ class JitsiMeetMethod {
         isVideoMuted: isVideoMuted,
         featureFlags: featureFlags,
       );
-_firestoreMethods.addToMeetingHistory(roomName);
+
+      _firestoreMethods.addToMeetingHistory(roomName);
+
       await JitsiMeetWrapper.joinMeeting(
         options: options,
         listener: JitsiMeetingListener(
