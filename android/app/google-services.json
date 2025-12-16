@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "10415281313",
+    "project_id": "zoom-project-fbe53",
+    "storage_bucket": "zoom-project-fbe53.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10415281313:android:00fba6eeffb3b7bb880ce0",
+        "android_client_info": {
+          "package_name": "com.example.zoom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10415281313-elhkqlbgscfhrl1k570cmkuuf2q1ltbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASwkv7VJN24tvTGjLIE_yZ0hH4JTGBqWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10415281313-elhkqlbgscfhrl1k570cmkuuf2q1ltbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
